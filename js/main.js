@@ -25,10 +25,10 @@ var AppRouter = Backbone.Router.extend({
         var view = new AnchorVideoView({
 			name: '"Social Climbers"',
 			block: 'Block ' + block,
-			initialState: Assets["GO_ON_BUTTON_UP"]
+			goOnButtonSrc: Assets["GO_ON_BUTTON_DISABLED"]
 		});
         
-	//	$("#content").html(view.render().el);
+		$("#content").html(view.render().el);
        
 		$("#videoPlayer").bind("ended", function () {
 			setupButton("#goOnButton", "GO_ON_BUTTON", "explore-zone.html#simulation/1");
@@ -41,7 +41,7 @@ var AppRouter = Backbone.Router.extend({
 			block: "Block " + block
 		});
 
-	//	$("#content").html(view.render().el);
+		$("#content").html(view.render().el);
         
         setupButton( "#goOnButton", "GO_ON_BUTTON", "#simulation/intro/"+block );
     },
@@ -51,8 +51,10 @@ var AppRouter = Backbone.Router.extend({
 			name: "Crash Test a Car",
 			block: "Block " + block
 		});
-        
-	//	$("#content").html(view.render().el);
+
+		$("#content").html(view.render().el);
+		var stage = new swiffy.Stage(document.getElementById("content"), swiffyobject);
+		stage.start();
     }
 });
 

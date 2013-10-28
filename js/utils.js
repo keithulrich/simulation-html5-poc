@@ -1,5 +1,5 @@
 function setupButton( id, assetIdRoot, destination ) {
-	
+
     $(id).bind( "mouseenter mousedown mouseup mouseleave click", function (event) {
 	
         var evtType = event.type;

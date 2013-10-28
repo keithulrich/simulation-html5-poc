@@ -8,7 +8,7 @@ var SimulationView = Backbone.View.extend({
         '</div>' +
         '<img id="goOnButton" src="images/explore-zone/buttons/go-on-up.png"/>' 
     ),
-    
+
     render: function () {
         this.$el.html(this.template(this.options));
         return this;

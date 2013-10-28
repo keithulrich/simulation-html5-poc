@@ -1,10 +1,6 @@
 var AnchorVideoView = Backbone.View.extend({
 	id: "anchorVideoView",
-	
-	initialize: function () {
-		//setupButton( "#goOnButton", "GO_ON_BUTTON", "explore-zone.html#simulation/1" );
-	},
-	
+
     template: Handlebars.compile(
         '<div>' +
             '<div id="title">{{name}}</div>' +
@@ -15,7 +11,7 @@ var AnchorVideoView = Backbone.View.extend({
                     'Your browser does not support the video tag.' +
                 '</video> ' +
             '</div>' + 
-            '<img id="goOnButton" src="{{initialState}}"/>' + 
+            '<img id="goOnButton" src="{{goOnButtonSrc}}"/>' + 
         '</div>'
     ),
 
